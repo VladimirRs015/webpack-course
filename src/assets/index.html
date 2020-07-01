@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+    <title>Vladimir es un crack</title>
+</head>
+<body>
+    <div id="app">
+        <!-- The code will be inyected right here -->
+        <div class="conteiner">
+            <div class="columns">
+                <div class="column is-2">
+                    <h1 class="title">
+                        My TODO WebApp
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <section class="container">
+            <ul class="container">
+                <div class="columns">
+                    <div class="column is-7">
+                        <li v-for="todo in todos" class="notification  is-primary title is-6" :key="todo.id">
+                            {{todo.title}}
+                            <button class="delete" v-on:click="deleteItem(todo.id)">
+                              
+                            </button>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
